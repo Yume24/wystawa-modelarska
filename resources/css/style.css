@@ -1,0 +1,179 @@
+:root {
+    --my-red: rgb(230, 28, 42);
+    --my-red-opaque: rgba(230, 28, 42, 0.9)
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+.rubik-mono-one-regular {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+.plus-jakarta-sans {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.8;
+  }  
+.navigation {
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 8rem;
+    padding: 0 1rem;
+    border-bottom: 3px solid var(--my-red);
+}
+.navigation img {
+    height: 8rem;
+    margin: 0 1.5rem;
+    margin-left: 0;
+}
+.navigation ul {
+    display: flex;
+    height: 100%;
+    margin-left: auto;
+}
+.navigation li {
+    height: 100%;
+    font-size: 1.25rem;
+    transition: background-color 0.1s linear, scale 0.3s ease-out;
+}
+.navigation ul a {
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.navigation li:hover {
+    background-color: var(--my-red);
+    scale: 1.1;
+}
+
+@keyframes slideshow {
+    0% {
+        background-image: url("../images/slideshow1.jpg");
+    }
+    12.5% {
+        background-image: url("../images/slideshow1.jpg");
+    }
+    25% {
+        background-image: url("../images/slideshow2.jpg");
+    }
+    37.5% {
+        background-image: url("../images/slideshow2.jpg");
+    }
+    50% {
+        background-image: url("../images/slideshow3.jpg");
+    }
+    62.5% {
+        background-image: url("../images/slideshow3.jpg");
+    }
+    75% {
+        background-image: url("../images/slideshow4.jpg");
+    }
+    87.5% {
+        background-image: url("../images/slideshow4.jpg");
+    }
+    100% {
+        background-image: url("../images/slideshow1.jpg");
+    }
+}
+
+.banner {
+    height: 60vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 3px solid black;
+    background-image: url("../images/slideshow1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: slideshow;
+    animation-delay: 5s;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        position: relative;
+        left: -20rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        left: 0;
+    }
+}
+
+.info-banner {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 40%;
+    color: white;
+    width: 40%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    box-shadow: 0.2rem 0.2rem var(--my-red-opaque);
+}
+.info-banner h1 {
+    font-size: 2rem;
+}
+
+.info-banner h2 {
+    font-size: 1.5rem;
+}
+.info-banner p {
+    font-size: 1.2rem;
+}
+.counter {
+    text-align: center;
+}
+.counter h2 {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.counter p {
+    font-size: 1.5rem;
+}
+.register-button {
+    padding: 2rem;
+    width: 20%;
+    margin: 4rem auto;
+    background-color: black;
+    color: white;
+    box-shadow: 0.2rem 0.2rem var(--my-red);
+    transition: background-color 0.1s linear, scale 0.3s ease-out, box-shadow 0.1s linear;
+    font-size: 1.5rem;
+}
+
+.register-button:hover {
+    box-shadow: none;
+    background-color: var(--my-red);
+    scale: 1.1;
+}

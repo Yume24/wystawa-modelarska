@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wystawa modelarska</title>
+        <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+        <link href="./resources/images/logo.png" type="images/png" rel="icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <script>
+            var countDownDate = new Date("Apr 11, 2026 8:00:00").getTime();
+
+            var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            var day_text = " dni ";
+            if (days === 1) day_text = " dzień" ;
+            var hours_text = " godzin ";
+            if (hours === 1) hours_text = " godzina ";
+            document.getElementById("time").innerHTML = days + " dni " + hours + " godzin "
+            + minutes + " minut " + seconds + " sekund ";
+
+            if (distance < 0) {
+            days = 0;
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            }
+            }, 1000);
+        </script>
     </head>
     <body>
-        <h1>Under construction!</h1>
+        <nav>
+            <div class="navigation">
+                <a href="./index.html"><img src="./resources/images/logo.png" alt="logo scale models" /></a>
+                <ul class ="plus-jakarta-sans">
+                    <li><a href="">Aktualności</a>
+                    <li><a href="" target="_blank" rel="noopener noreferrer">Rejestracja</a>
+                    <li><a href="" target="_blank" rel="noopener noreferrer">Regulamin</a>
+                    <li><a href="">Harmonogram</a></li>
+                    <li><a href="">Klasy startowe</a>
+                    <li><a href="">GT-Cup</a>
+                    <li><a href="">Poprzednie edycje</a>
+                    <li><a href="">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            <div class="banner">
+                <div class="info-banner plus-jakarta-sans">
+                    <h1 class="rubik-mono-one-regular">II Meeting Modelarski Pojazdów Cywilnych Ogrodzieniec 2026</h1>
+                    <h2>11 kwietnia 2026r. 8:00 - 17:00</h2>
+                    <p>
+                        Głównym celem imprezy jest popularyzacja modelarstwa jako hobby rozwijającego 
+                        umiejętności manualne i zdolności techniczne wśród dzieci
+                        i młodzieży, ale także dorosłych i seniorów w każdym wieku.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="counter plus-jakarta-sans">
+                <h2>Do rozpoczęcia imprezy pozostało:</h2>
+                <p id="time" class="rubik-mono-one-regular">- dni - godzin - minut - sekund</p>
+                <a href=""><div class="register-button rubik-mono-one-regular">
+                    <p>REJESTRACJA</p>
+                </div></a>
+            </div>
+        </main>
+        <footer></footer>
     </body>
 </html>
