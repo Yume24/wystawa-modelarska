@@ -8,24 +8,32 @@ html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 nav {
     z-index: 10;
     position: sticky;
     top: 0;
 }
+
 .rubik-mono-one-regular {
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
     line-height: 1;
-  }
+}
+
 .plus-jakarta-sans {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     line-height: 1.8;
-  }  
+}
+
+.shadow {
+    box-shadow: 0.2rem 0.2rem var(--my-red);
+}
+
 .navigation {
 
     font-family: Arial, Helvetica, sans-serif;
@@ -37,27 +45,32 @@ nav {
     padding: 0 1rem;
     border-bottom: 3px solid var(--my-red);
 }
+
 .navigation img {
     height: 8rem;
     margin: 0 1.5rem;
     margin-left: 0;
 }
+
 .navigation ul {
     display: flex;
     height: 100%;
     margin-left: auto;
 }
+
 .navigation li {
     height: 100%;
     font-size: 1.25rem;
     transition: background-color 0.1s linear, scale 0.3s ease-out;
 }
+
 .navigation ul a {
     height: 100%;
     padding: 0 2rem;
     display: flex;
     align-items: center;
 }
+
 .navigation li:hover {
     background-color: var(--my-red);
     scale: 1.1;
@@ -88,6 +101,7 @@ nav {
     flex-shrink: 0;
     transition: transform 1s ease;
 }
+
 .slide {
     min-width: 100%;
     height: 100%;
@@ -102,6 +116,7 @@ nav {
         position: relative;
         left: -20rem;
     }
+
     to {
         opacity: 1;
         position: relative;
@@ -123,8 +138,8 @@ nav {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    box-shadow: 0.2rem 0.2rem var(--my-red-opaque);
 }
+
 .info-banner h1 {
     font-size: 2rem;
 }
@@ -132,27 +147,31 @@ nav {
 .info-banner h2 {
     font-size: 1.5rem;
 }
+
 .info-banner p {
     font-size: 1.2rem;
 }
+
 .counter {
     text-align: center;
 }
+
 .counter h2 {
     margin-top: 5rem;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
+
 .counter p {
     font-size: 1.5rem;
 }
+
 .register-button {
     padding: 2rem;
     width: 20%;
     margin: 4rem auto;
     background-color: black;
     color: white;
-    box-shadow: 0.2rem 0.2rem var(--my-red);
     transition: background-color 0.1s linear, scale 0.3s ease-out, box-shadow 0.1s linear;
     font-size: 1.5rem;
 }
@@ -161,4 +180,48 @@ nav {
     box-shadow: none;
     background-color: var(--my-red);
     scale: 1.1;
+}
+
+.tiles {
+    gap: 2rem;
+    margin: 5rem auto;
+    display: grid;
+    grid-template: 1fr 1fr 3fr/ 1fr 1fr 1fr;
+    width: 80%;
+    height: 80rem;
+}
+
+.tile {
+    background-color: black;
+    border: 3px solid black;
+    transition: background-color 0.1s linear;
+}
+
+.tile:hover {
+    background-color: white;
+}
+
+#schedule {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+}
+
+#accommodation {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+#attractions {
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+}
+
+#map {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+}
+
+#sponsors {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
 }
